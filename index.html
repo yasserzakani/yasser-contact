@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasser Zakani | Contact</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      background: #f1f5f3;
+      color: #193b32;
+      margin: 0;
+      padding: 24px;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 32px 24px;
+      border-radius: 22px;
+      text-align: center;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 10px 35px rgba(25, 59, 50, 0.08);
+    }
+
+    h1 { margin: 0 0 4px; font-size: 24px; }
+    p  { margin: 8px 0; }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: #dcebe5;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a { color: inherit; }
+
+    .button {
+      display: block;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #176b56;
+      color: #ffffff;
+    }
+    .secondary {
+      background: #ffffff;
+      color: #176b56;
+      border: 1px solid #d5e3dc;
+    }
+
+    .note { font-size: 12px; color: #65766f; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="avatar" id="avatar">YZ</div>
+
+    <h1>Yasser Zakani</h1>
+    <p>Contact card</p>
+
+    <p><a href="tel:+212669126248">+212 669-126248</a></p>
+    <p><a href="mailto:yasser@oneclickdrive.com">yasser@oneclickdrive.com</a></p>
+
+    <a class="button" href="contact.vcf" download="Yasser-Zakani.vcf">Add to Contacts</a>
+    <a class="button secondary" href="tel:+212669126248">Call</a>
+    <a class="button secondary" href="mailto:yasser@oneclickdrive.com">Email</a>
+
+    <p class="note">
+      Tap Add to Contacts and follow your phone's instructions to save this contact.
+    </p>
+  </main>
+
+  <script>
+    // Optional: put a DIRECT image URL (.jpg, .png, ...) between the quotes.
+    var PHOTO_URL = "";
+
+    if (PHOTO_URL) {
+      var img = document.createElement("img");
+      img.src = PHOTO_URL;
+      img.alt = "Yasser Zakani";
+      img.onerror = function () { img.remove(); };
+      var avatar = document.getElementById("avatar");
+      avatar.textContent = "";
+      avatar.appendChild(img);
+    }
+  </script>
+</body>
+</html>
